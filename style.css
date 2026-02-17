@@ -137,8 +137,9 @@ footer {
 
 .media-item img {
   width: 100%;
-  height: 180px;       
-  object-fit: cover;
+  height: 250px;
+  object-fit: contain;   /* key change */
+  background: #fff;      /* or #f4f4f4 */
   border-radius: 10px;
   display: block;
 }
