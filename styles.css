@@ -1,0 +1,366 @@
+/* ===========================
+   Justinna Dixon Portfolio
+   Color Palette: Pink & Beige
+   =========================== */
+
+:root {
+  --pink-light:    #fdf0f2;
+  --pink-mid:      #f5c6cf;
+  --pink-accent:   #d4849a;
+  --pink-dark:     #b5637a;
+  --beige-light:   #faf6f1;
+  --beige-mid:     #f0e8dc;
+  --beige-dark:    #d6c4b0;
+  --text-dark:     #2d2228;
+  --text-mid:      #5c4a52;
+  --text-light:    #8a7480;
+  --white:         #ffffff;
+}
+
+/* ===== RESET & BASE ===== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  background-color: var(--beige-light);
+  color: var(--text-dark);
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Georgia', serif;
+  font-weight: normal;
+  color: var(--text-dark);
+}
+
+a {
+  color: var(--pink-dark);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+a:hover { color: var(--pink-accent); }
+
+img { max-width: 100%; display: block; }
+
+/* ===== NAVIGATION ===== */
+nav {
+  background-color: var(--white);
+  border-bottom: 2px solid var(--pink-mid);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 12px rgba(180,100,120,0.08);
+}
+
+.nav-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 68px;
+}
+
+.nav-brand {
+  font-size: 1.15rem;
+  letter-spacing: 0.04em;
+  color: var(--pink-dark);
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-links a {
+  font-family: 'Georgia', serif;
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-mid);
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--pink-dark);
+  border-bottom-color: var(--pink-accent);
+}
+
+/* ===== HERO ===== */
+.hero {
+  background: linear-gradient(135deg, var(--pink-light) 0%, var(--beige-mid) 100%);
+  padding: 5rem 2rem 4rem;
+  text-align: center;
+  border-bottom: 1px solid var(--pink-mid);
+}
+
+.hero-photo {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top;
+  margin: 0 auto 1.5rem;
+  border: 4px solid var(--white);
+  box-shadow: 0 4px 24px rgba(180,100,120,0.18);
+}
+
+.hero h1 {
+  font-size: 2.6rem;
+  letter-spacing: 0.02em;
+  margin-bottom: 0.4rem;
+  color: var(--text-dark);
+}
+
+.hero-tagline {
+  font-size: 1rem;
+  color: var(--text-mid);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 1.6rem;
+}
+
+.hero-divider {
+  width: 60px;
+  height: 2px;
+  background: var(--pink-accent);
+  margin: 0 auto;
+}
+
+/* ===== PAGE HEADER (non-home pages) ===== */
+.page-header {
+  background: linear-gradient(135deg, var(--pink-light) 0%, var(--beige-mid) 100%);
+  padding: 3rem 2rem 2.5rem;
+  text-align: center;
+  border-bottom: 1px solid var(--pink-mid);
+}
+
+.page-header h1 {
+  font-size: 2rem;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.5rem;
+}
+
+.page-header .page-subtitle {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* ===== MAIN CONTENT ===== */
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 3.5rem 2rem;
+}
+
+/* ===== SECTION HEADERS ===== */
+.section-title {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--pink-dark);
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid var(--pink-mid);
+}
+
+/* ===== ABOUT SECTION ===== */
+.about-section {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 2.5rem;
+  box-shadow: 0 2px 16px rgba(180,100,120,0.07);
+  margin-bottom: 2.5rem;
+}
+
+.about-section p {
+  font-size: 1.05rem;
+  color: var(--text-mid);
+  line-height: 1.85;
+}
+
+/* ===== CONTACT SECTION ===== */
+.contact-section {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 2.5rem;
+  box-shadow: 0 2px 16px rgba(180,100,120,0.07);
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--beige-mid);
+  font-size: 0.95rem;
+  color: var(--text-mid);
+}
+.contact-item:last-child { border-bottom: none; }
+
+.contact-label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-light);
+  min-width: 80px;
+}
+
+/* ===== TIMELINE / EXPERIENCE ===== */
+.timeline {
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: var(--pink-mid);
+  border-radius: 2px;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2.5rem;
+  padding-left: 1.5rem;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -1.88rem;
+  top: 6px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--pink-accent);
+  border: 2px solid var(--white);
+  box-shadow: 0 0 0 2px var(--pink-mid);
+}
+
+.timeline-institution {
+  font-size: 1.05rem;
+  font-weight: bold;
+  color: var(--text-dark);
+  margin-bottom: 0.1rem;
+}
+
+.timeline-role {
+  font-size: 0.95rem;
+  color: var(--pink-dark);
+  margin-bottom: 0.25rem;
+  font-style: italic;
+}
+
+.timeline-date {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-light);
+  margin-bottom: 0.6rem;
+}
+
+.timeline-desc {
+  font-size: 0.94rem;
+  color: var(--text-mid);
+  line-height: 1.75;
+}
+
+.timeline-desc p { margin-bottom: 0.5rem; }
+.timeline-desc p:last-child { margin-bottom: 0; }
+
+/* ===== RESUME CARD ===== */
+.resume-card {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 2.5rem;
+  box-shadow: 0 2px 16px rgba(180,100,120,0.07);
+  margin-bottom: 2.5rem;
+}
+
+/* ===== SKILLS ===== */
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 0.5rem;
+}
+
+.skill-tag {
+  background: var(--pink-light);
+  color: var(--pink-dark);
+  border: 1px solid var(--pink-mid);
+  border-radius: 20px;
+  padding: 0.3rem 0.9rem;
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+}
+
+/* ===== HONORS GRID ===== */
+.honors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.8rem;
+}
+
+.honor-card {
+  background: var(--white);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 16px rgba(180,100,120,0.09);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.honor-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 24px rgba(180,100,120,0.15);
+}
+
+.honor-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: top;
+}
+
+.honor-label {
+  padding: 1rem 1.2rem;
+  font-size: 0.9rem;
+  color: var(--text-mid);
+  line-height: 1.5;
+  border-top: 2px solid var(--pink-light);
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: var(--white);
+  border-top: 2px solid var(--pink-mid);
+  text-align: center;
+  padding: 1.5rem 2rem;
+  font-size: 0.82rem;
+  color: var(--text-light);
+  letter-spacing: 0.06em;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 700px) {
+  .nav-inner { flex-direction: column; height: auto; padding: 1rem; gap: 0.8rem; }
+  .nav-links { gap: 1.2rem; flex-wrap: wrap; justify-content: center; }
+  .hero h1 { font-size: 2rem; }
+  .honors-grid { grid-template-columns: 1fr; }
+}
